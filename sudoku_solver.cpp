@@ -23,7 +23,7 @@ public:
   void exclude_value( int value );
   void set_value( int value );
   void print_cell_value() const; 
-  int return_cell_value() const; 
+  const int& return_cell_value() const; 
   sudoku_cell( int input, size_t i, size_t j );
   ~sudoku_cell() { ; }
 }; 
@@ -64,7 +64,7 @@ sudoku_cell::sudoku_cell( int input, size_t i, size_t j ) {
   //this-> j = j;
 }
 
-int sudoku_cell::return_cell_value() const {
+const int& sudoku_cell::return_cell_value() const {
   // returned values are 0 for undefined valued cells, or the cell's final value otherwise
   return cell_value;
 }  
